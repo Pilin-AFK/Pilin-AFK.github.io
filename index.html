@@ -1,0 +1,478 @@
+<html>
+<title>
+Motocicletas
+</title>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de texto</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="searchInput" placeholder="Escribe tu búsqueda...">
+    <button onclick="buscarTexto()">Buscar</button>
+    <p id="mensaje">No se encontraron coincidencias.</p>
+    <div id="contenido">
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Desplegable con Subtemas</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            background-color: #1a237e;
+            color: white;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            background-color: #5c6bc0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .content, .subcontent {
+            display: none; /* Ocultar inicialmente */
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .active {
+            display: block; /* Mostrar solo la sección activa */
+        }
+
+        /* Animación de transición */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Imprudencia de los jovenes al conducir motocicleta</h2>
+
+    <!-- Botones principales -->
+    <div style="text-align: center;">
+        <button class="button" onclick="showContent('info1')">Causas y Consecuencias</button>
+        <button class="button" onclick="showContent('info2')">Como se pudo haber evitado</button>
+    </div>
+
+    <!-- Tema 1 y sus subtemas -->
+    <div id="info1" class="content">
+        <h3>Por qué sucede y cuales son las Concecuencias?</h3>
+        <p>Selecciona un subtema:</p>
+        <button class="button" onclick="showSubContent('sub1')">CAUSAS</button>
+        <button class="button" onclick="showSubContent('sub2')">CONSECUENCIAS</button>
+        <button class="button" onclick="hideContent()">Regresar</button>
+    </div>
+
+    <!-- Subtemas de Tema 1 -->
+    <div id="sub1" class="subcontent">
+        <h3><p style="color: #311b92;">~CAUSAS~</h3></p>
+        <p>Los jovenes de 17 a 24 años se accidentan en motocicleta por una combinacion de factores relacionados con su desarrollo, comportamiento y la conduccion misma. Algunas de las causas mas comunes incluyen:
+<i>
+<font size="4">
+<p><p style="color: #7d6608;"><b>Factores de comportamiento y desarrollo:</p></b></font>
+</p>
+	<font size="4">
+<p><li>Inexperiencia:</Font> Los conductores jovenes tienen menos experiencias en la evaluacion de riesgos y 
+	en la reaccion ante situaciones peligrosas en la carretera.</p> </li>
+	
+	<font size="4">
+<p><li>Distracciones:</Font> Los jovenes son mas propensos a distraerse con el telefono celular,la musica u otros pasajeros.</p></li>
+
+	<font size="4">
+<p><li>Subestimación del Riesgo y sobreestimacion de habilidades:</Font> Tienden a sentirse más seguros de lo que realmente son al conducir, lo que los lleva a tomar riesgos innecesarios.</p></li>
+
+	<font size="4">
+<p><li>Influenza del grupo:</Font> Pueden sentirse presionados por sus compañeros para conducir de manera arriesgada.</p></li>
+
+	<font size="4">
+<p><li>Conducción bajo los efectos del alcohol o drogas:</Font> El consumo de sustancias disminuye la capacidad de jucio y los reflejos, aumentando significativamente el riesgo de accidente</p></li>
+</i>
+
+
+
+
+        <button class="button" onclick="hideSubContent()">Regresar a Tema Principal 1</button>
+    </div>
+
+    <div id="sub2" class="subcontent">
+         <h3><p style="color: #311b92;">~CONSECUENCIAS~</h3></p>
+        <p>
+	<ul>
+        <li><p style="color: #7d6608;"><font size="4">Consecuencias Fisicas</font></li></p>
+	<ul>
+        	<font size="4">
+	<p><li>Lesiones Graves:</Font> Desde fracturas, esguinces y laceraciones hasta lesiones cerebrales traumaticas (contuciones, daño cerebral permanente), Lesiones de la medula espinal (parálisis parcial o total), amputaciones y la muerte.
+
+		<font size="4">
+        <p><li>Lesiones a largo plazo y discapacidades:</Font> Muchas lesiones pueden requerir largos periodos de recuperación, cirugías, rehabilitacion y  pueden dejar secuelas permanentes que afecten su capacidad para trabajar, estudiar o realizar actividades cotidianas.
+		
+		<font size="4">
+        <p><li>Dolor cronico:</Font> Las lesiones oueden derivar en dolor persistente que disminuya su calidad de vida.
+		
+		<font size="4">
+        <p><li>Cicatrices y desfiguración:</Font> Especialmente en accidentes sin la protección adecuada, pueden ocurrir graves abrasiones (erupción de carretera) y quemaduras permanentes o desfiguración.
+   </ul>
+ </ul>
+</p>
+
+        <p>
+	<ul>
+        <li><p style="color: #7d6608;"><font size="4">Consecuencias psicológicas y Emocionales</font></li></p>
+	<ul>
+
+        	<font size="4">
+	<p><li>Trauma psicologíco:</Font> El accidente puede ser una experiencia traumatica que deriva en transtorno de estres postraumatico (TEPT), ansiedad,  depresion, ataques de panico, fobias (especialmente a conducir o ur en moto), sentimientos de culpa y flashbacks (recuerdos) del accidente.
+
+		<font size="4">
+        <p><li>Dificultad para retomar la vida normal:</Font> El miedo y la ansiedad pueden dificultar la vuelta a la conduccion, al trabajo, a los estudios o a las actividades sociales.
+   </ul>
+ </ul>
+</p>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel Automático</title>
+    <style>
+        /* Contenedor general */
+        .carousel-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Imágenes alineadas en fila */
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Puntos de navegación */
+        .carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .carousel-dots button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: none;
+            background-color: gray;
+            cursor: pointer;
+        }
+
+        .carousel-dots button.active {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Imagenes</h2>
+
+    <!-- Carrusel -->
+    <div class="carousel-container">
+        <div class="carousel-images">
+            <img src="C:\Users\santo\OneDrive\611ae1053bce0.jpg" alt="Imagen 1">
+            <img src="C:\Users\santo\OneDrive\accidentes-de-moto.jpeg" alt="Imagen 2">
+            <img src="C:\Users\santo\OneDrive\Most+Common+Causing+of+Motorcycle+Accidents+-+Dressie+Law+Firm.jpeg" alt="Imagen 3">
+	    <img src="C:\Users\santo\OneDrive\moto-cdmx.jpg" alt="Imagen 4">
+        </div>
+        <!-- Puntos de navegación -->
+        <div class="carousel-dots">
+            <button onclick="goToSlide(0)" class="active"></button>
+            <button onclick="goToSlide(1)"></button>
+            <button onclick="goToSlide(2)"></button>
+        </div>
+    </div>
+
+    <script>
+        const carousel = document.querySelector('.carousel-images');
+        const dots = document.querySelectorAll('.carousel-dots button');
+        let index = 0; // Índice actual
+        const slideInterval = 3000; // Tiempo entre desplazamientos (ms)
+
+        function updateCarousel() {
+            const slideWidth = carousel.clientWidth;
+            carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+            
+            // Actualizar los puntos activos
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function goToSlide(slideIndex) {
+            index = slideIndex;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            index = (index + 1) % dots.length; // Ciclo infinito
+            updateCarousel();
+        }
+
+        // Desplazamiento automático
+        setInterval(nextSlide, slideInterval);
+    </script>
+</body>
+</html>
+
+
+
+        <button class="button" onclick="hideSubContent()">Regresar a Tema Principal 1</button>
+    </div>
+
+    <!-- Tema 2 y sus subtemas -->
+    <div id="info2" class="content">
+        <h3>Como se podria evitar?</h3>
+        <p>Selecciona un subtema:</p>
+        <button class="button" onclick="showSubContent('sub3')">Infraestructura vial</button>
+        <button class="button" onclick="showSubContent('sub4')">Educación de seguridad</button>
+        <button class="button" onclick="hideContent()">Regresar</button>
+    </div>
+
+    <!-- Subtemas de Tema 2 -->
+    <div id="sub3" class="subcontent">
+        <h3><p style="color: #311b92;">~Desde la perspectiva de la infraestructura vial:~</h3></p>
+        <p>
+	Las condiciones del entorno pueden influir enormemente en la seguridad de los motociclistas jóvenes. Algunas soluciones incluyen:
+    <ul>
+        
+	<font size="4">
+<p><li>Mejoras en carreteras y calles:</Font> Señalización clara, iluminación adecuada y pavimento en buen estado reducen los riesgos de accidentes.</li>
+
+	<font size="4">
+<p><li>Carriles exclusivos para motocicletas:</Font> En ciudades con alto tráfico, los carriles dedicados ayudan a separar motociclistas de vehículos más grandes, reduciendo colisiones.</p></li>
+
+	<font size="4">
+<p><li>Reducción de puntos de alto riesgo:</Font> Cruces peligrosos, curvas cerradas y zonas con poca visibilidad deben ser rediseñadas para minimizar el riesgo de accidentes.</p></li>
+
+    </ul>
+	<i>
+	<b>Una infraestructura adecuada puede hacer una gran diferencia en la seguridad de los motociclistas jóvenes.</b>
+	</i>
+	</p>
+        <button class="button" onclick="hideSubContent()">Regresar a Tema Principal 2</button>
+    </div>
+
+    <div id="sub4" class="subcontent">
+        <h3><p style="color: #311b92;">~Desde la perspectiva de la educación y cultura de seguridad~</h3></p>
+        <p>
+    <ul>
+        <font size="4">
+<p><li>Cursos de conducción segura:</Font> Entrenamiento obligatorio sobre maniobras, frenado de emergencia y conducción defensiva puede salvar vidas.</p></li>
+
+        <font size="4">
+<p><li>Uso adecuado del equipo de protección:</Font> Casco certificado, ropa con protección y guantes adecuados pueden reducir lesiones en caso de accidente.</p></li>
+
+        <font size="4">
+<p><li>Concientización sobre riesgos:</Font> Campañas educativas que muestran las consecuencias de conducir sin precaución pueden generar un mayor sentido de responsabilidad.</p></li>
+
+    </ul>
+Una combinación de una infraestructura adecuada con una cultura de prevención puede hacer una gran diferencia en la seguridad de los motociclistas jóvenes</p>
+        <button class="button" onclick="hideSubContent()">Regresar a Tema Principal 2</button>
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            // Ocultar temas principales y subtemas
+            const contents = document.querySelectorAll('.content, .subcontent');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Mostrar el tema seleccionado
+            document.getElementById(contentId).classList.add('active');
+        }
+
+        function hideContent() {
+            // Ocultar todos los contenidos y subtemas
+            const contents = document.querySelectorAll('.content, .subcontent');
+            contents.forEach(content => content.classList.remove('active'));
+        }
+
+        function showSubContent(subContentId) {
+            // Ocultar todos los subtemas y temas principales
+            const contents = document.querySelectorAll('.content, .subcontent');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Mostrar el subtema seleccionado
+            document.getElementById(subContentId).classList.add('active');
+        }
+
+        function hideSubContent() {
+            // Ocultar subtemas activos y mostrar el tema principal relacionado
+            const subContents = document.querySelectorAll('.subcontent');
+            subContents.forEach(subContent => subContent.classList.remove('active'));
+        }
+    </script>
+</body>
+</html>
+
+<html>
+<body>
+<hr style="width:1560px; height:8px;background:#000">
+</hr>
+
+<h1><font size="4">
+		<h2 id="seccion2"><p style="text-align: center;">
+Inicio</h2></h1>
+		</Font></p>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra Lateral con Hover</title>
+    <style>
+        /* Estilo de la barra lateral */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            left: -280px; /* Oculta la barra fuera de la pantalla */
+            top: 0;
+   	    background-color: #808080;
+            color: white;
+            padding: 20px;
+            transition: left 0.3s ease-in-out;
+        }
+
+        /* Cuando el usuario pase el mouse por el área de la barra, se despliega */
+        .sidebar:hover {
+            left: 0;
+        }
+
+        /* Área pequeña que activa la barra cuando pasa el mouse */
+        .toggle-area {
+            width: 20px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contenido de la página */
+        .content {
+            margin-left: 30px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Área invisible para detectar el hover -->
+    <div class="toggle-area"></div>
+
+    <!-- Barra lateral con información adicional -->
+    <div class="sidebar">
+        <h2>Barra de contenido</h2>
+        <ul>
+            <li>
+<a href="#seccion2">Inicio</a><p>
+</p>
+</li>
+            <li>Dato interesante 2</li>
+            <li>Dato interesante 3</li>
+        </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <h1>Página Principal</h1>
+        <p>Aquí va el contenido principal de la página.</p>
+    </div>
+</body>
+</html>
+
+
+
+</div>
+
+   <script>
+        function buscarTexto() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let contenido = document.getElementById("contenido");
+            let mensaje = document.getElementById("mensaje");
+
+            if (!input) return;
+
+            let textoHTML = contenido.innerHTML.replace(/<span class="highlight">|<\/span>/g, '');
+            
+            let regex = new RegExp(`(${input})`, "gi");
+            contenido.innerHTML = textoHTML.replace(regex, '<span class="highlight">$1</span>');
+
+            let primerCoincidencia = document.querySelector(".highlight");
+
+            if (primerCoincidencia) {
+                mensaje.style.display = "none";
+                primerCoincidencia.scrollIntoView({ behavior: "smooth", block: "start" });
+            } else {
+                mensaje.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
