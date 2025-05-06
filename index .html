@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imprudencia de los Jóvenes al Conducir Motocicleta</title>
+  <style>
+    /* Reset básico */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f4f4f9; color: #333; }
+    h1, h2, h3 { text-align: center; margin: 20px 0; }
+    /* Buscador */
+    .search-box { text-align: center; margin: 20px; }
+    .search-box input { padding: 8px; width: 220px; font-size: 16px; }
+    .search-box button { padding: 8px 12px; margin-left: 4px; font-size: 16px; cursor: pointer; }
+    #mensaje { color: red; margin-top: 8px; display: none; }
+    .highlight { background: yellow; font-weight: bold; }
+    /* Botones principales y subbotones */
+    .button { display: inline-block; margin: 10px; padding: 10px 16px; background: #5c6bc0; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+    .button:hover { background: #3949ab; }
+    /* Contenedores */
+    .section, .subsection, .carousel-container, .sidebar { display: none; }
+    .active { display: block; }
+    .section { background: #fff; width: 90%; max-width: 800px; margin: 20px auto; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .subsection { background: #fafafa; margin: 20px auto; padding: 20px; border-left: 4px solid #3949ab; }
+    /* Carrusel */
+    .carousel-container { position: relative; width: 90%; max-width: 800px; margin: 40px auto; overflow: hidden; }
+    .carousel-images { display: flex; transition: transform 0.5s ease-in-out; }
+    .carousel-images img { width: 100%; flex-shrink: 0; }
+    .carousel-dots { text-align: center; margin-top: 10px; }
+    .carousel-dots button { width: 12px; height: 12px; border-radius: 50%; border: none; margin: 0 4px; background: gray; cursor: pointer; }
+    .carousel-dots button.active { background: #4CAF50; }
+    /* Sidebar hover */
+    .sidebar { position: fixed; left: -240px; top: 0; width: 240px; height: 100vh; background: #808080; color: #fff; padding: 20px; transition: left 0.3s ease-in-out; }
+    .sidebar:hover { left: 0; }
+    .toggle-area { position: fixed; left: 0; top: 0; width: 20px; height: 100vh; }
+    .sidebar ul { list-style: none; margin-top: 20px; }
+    .sidebar li { margin: 10px 0; }
+    .sidebar a { color: #fff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Imprudencia de los Jóvenes al Conducir Motocicleta</h1>  <!-- Buscador -->  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Escribe tu búsqueda...">
+    <button onclick="buscarTexto()">Buscar</button>
+    <button onclick="limpiarBusqueda()">Limpiar</button>
+    <p id="mensaje">No se encontraron coincidencias.</p>
+  </div>  <!-- Botones de sección -->  <div style="text-align:center;">
+    <button class="button" onclick="showSection('sec1')">Causas y Consecuencias</button>
+    <button class="button" onclick="showSection('sec2')">Cómo Evitarlo</button>
+    <button class="button" onclick="showSection('sec3')">Galería de Imágenes</button>
+  </div>  <!-- Sección 1 -->  <div id="sec1" class="section">
+    <h2>Causas y Consecuencias</h2>
+    <button class="button" onclick="showSub('sub1')">Causas</button>
+    <button class="button" onclick="showSub('sub2')">Consecuencias</button><div id="sub1" class="subsection">
+  <h3>Causas</h3>
+  <ul>
+    <li>Inexperiencia</li>
+    <li>Distracciones (celular, música)</li>
+    <li>Presión social</li>
+    <li>Conducción bajo sustancias</li>
+  </ul>
+</div>
+<div id="sub2" class="subsection">
+  <h3>Consecuencias</h3>
+  <ul>
+    <li>Lesiones graves</li>
+    <li>Secuelas permanentes</li>
+    <li>Impacto psicológico</li>
+  </ul>
+</div>
+
+  </div>  <!-- Sección 2 -->  <div id="sec2" class="section">
+    <h2>Cómo Evitarlo</h2>
+    <button class="button" onclick="showSub('sub3')">Infraestructura</button>
+    <button class="button" onclick="showSub('sub4')">Educación</button><div id="sub3" class="subsection">
+  <h3>Infraestructura Vial</h3>
+  <ul>
+    <li>Señalización clara</li>
+    <li>Carriles exclusivos</li>
+    <li>Pavimento en buen estado</li>
+  </ul>
+</div>
+<div id="sub4" class="subsection">
+  <h3>Educación y Cultura</h3>
+  <ul>
+    <li>Cursos de conducción segura</li>
+    <li>Uso de equipo de protección</li>
+    <li>Campañas de concientización</li>
+  </ul>
+</div>
+
+  </div>  <!-- Sección 3: Carrusel -->  <div id="sec3" class="section carousel-container">
+    <h2>Galería de Imágenes</h2>
+    <div class="carousel-images">
+      <img src="611ae1053bce0.jpg" alt="Accidente de moto">
+      <img src="Most+Common+Causing+of+Motorcycle+Accidents+-+Dressie+Law+Firm.jpeg" alt="Accidente">
+    </div>
+    <div class="carousel-dots">
+      <button onclick="goToSlide(0)" class="active"></button>
+      <button onclick="goToSlide(1)"></button>
+    </div>
+  </div>  <!-- Sidebar hover -->  <div class="toggle-area"></div>
+  <div class="sidebar">
+    <h2>Contenido</h2>
+    <ul>
+      <li><a href="#" onclick="showSection('sec1')">Causas y Consecuencias</a></li>
+      <li><a href="#" onclick="showSection('sec2')">Cómo Evitarlo</a></li>
+      <li><a href="#" onclick="showSection('sec3')">Galería</a></li>
+    </ul>
+  </div>  <script>
+    // Mostrar sección
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.subsection').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    // Mostrar subsección
+    function showSub(id) {
+      document.querySelectorAll('.subsection').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    // Búsqueda de texto
+    function buscarTexto() {
+      const term = document.getElementById('searchInput').value.trim();
+      const mensaje = document.getElementById('mensaje');
+      if (!term) return;
+      const regex = new RegExp(`(${term})`, 'gi');
+      let found = false;
+      document.querySelectorAll('body').forEach(() => {}); // placeholder
+      document.querySelectorAll('h2, h3, p, li').forEach(el => {
+        const text = el.textContent;
+        if (regex.test(text)) {
+          el.innerHTML = text.replace(regex, '<span class="highlight">$1</span>');
+          found = true;
+        } else {
+          el.innerHTML = el.textContent;
+        }
+      });
+      mensaje.style.display = found ? 'none' : 'block';
+    }
+    function limpiarBusqueda() {
+      document.getElementById('searchInput').value = '';
+      document.getElementById('mensaje').style.display = 'none';
+      document.querySelectorAll('h2, h3, p, li').forEach(el => el.innerHTML = el.textContent);
+    }
+    // Carrusel
+    const carousel = document.querySelector('.carousel-images');
+    const dots = document.querySelectorAll('.carousel-dots button');
+    let index = 0;
+    function updateCarousel() {
+      const width = carousel.clientWidth;
+      carousel.style.transform = `translateX(-${index * width}px)`;
+      dots.forEach((d,i) => d.classList.toggle('active', i===index));
+    }
+    function goToSlide(i) { index = i; updateCarousel(); }
+    setInterval(() => { index = (index+1)%dots.length; updateCarousel(); }, 3000);
+    // Al cargar, mostrar primera sección
+    window.onload = () => showSection('sec1');
+  </script></body>
+</html>
